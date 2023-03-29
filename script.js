@@ -21,32 +21,28 @@ function randomGen(){
    return RPS[randomNum];
 }
 var computer = randomGen();
+
 if((choose === "R" && computer === "R") || (choose === "P" && computer ==="P")|| (choose === "S" && computer ==="S")){
     alert("You have tied!");
     tie = tie+1;
-    alert("Wins=" + win+
-          "Ties = "+ tie+
-          "Loses = "+lose);
-    var playAgain = confirm("Do you want to play again?");
+    
     
 }
 
 else if((choose === "R" && computer === "S") || (choose === "P" && computer ==="R")|| (choose === "S" && computer ==="P")){
     alert("You have Won!");
     win = win+1;
-    alert("Wins=" + win+
-    "Ties = "+ tie+
-    "Loses = "+lose);
-    var playAgain = confirm("Do you want to play again?");
+    
    
 }
-else if((choose === "R" && computer === "P") || (choose === "P" && computer ==="S")|| (choose === "S" && computer ==="R")) {
+// else((choose === "R" && computer === "P") || (choose === "P" && computer ==="S")|| (choose === "S" && computer ==="R")) {
+    else{
     alert("You have lost!");
     lose = lose+1;
-    alert("Wins=" + win+ 
-          "Ties = "+ tie+
-          "Loses = "+lose);
-    var playAgain = confirm("Do you want to play again?");
     
 }
+alert("Wins=" + win+ 
+          "Ties = "+ tie+
+          "Loses = "+lose);
+
 
