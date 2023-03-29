@@ -20,8 +20,26 @@ function randomGen(){
    return RPS[randomNum];
 }
 var computer = randomGen();
-if((choose === "R" && computer === "R") || (choose === "P" && RPS[randomNum] ==="P")|| (choose === "S" && RPS[randomNum] ==="S")){
+if((choose === "R" && computer === "R") || (choose === "P" && computer ==="P")|| (choose === "S" && computer ==="S")){
     alert("You have tied!");
     tie = tie+1;
-    alert(tie);
+    alert("Wins=" + win+
+          "Ties = "+ tie+
+          "Loses = "+lose);
 }
+
+else if((choose === "R" && computer === "S") || (choose === "P" && computer ==="R")|| (choose === "S" && computer ==="P")){
+    alert("You have Won!");
+    win = win+1;
+    alert("Wins=" + win+
+    "Ties = "+ tie+
+    "Loses = "+lose);
+}
+else if((choose === "R" && computer === "P") || (choose === "P" && computer ==="S")|| (choose === "S" && computer ==="R")) {
+    alert("You have lost!");
+    lose = lose+1;
+    alert("Wins=" + win+
+          "Ties = "+ tie+
+          "Loses = "+lose);
+}
+
