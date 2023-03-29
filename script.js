@@ -11,6 +11,7 @@
 
 var RPS = ["R", "P", "S"];
 var choose = prompt(" Choose R, P, or S");
+// var playAgain = confirm("Do you want to play again?")
 var tie = 0;
 var win = 0;
 var lose = 0;
@@ -26,6 +27,8 @@ if((choose === "R" && computer === "R") || (choose === "P" && computer ==="P")||
     alert("Wins=" + win+
           "Ties = "+ tie+
           "Loses = "+lose);
+    var playAgain = confirm("Do you want to play again?");
+    
 }
 
 else if((choose === "R" && computer === "S") || (choose === "P" && computer ==="R")|| (choose === "S" && computer ==="P")){
@@ -34,12 +37,16 @@ else if((choose === "R" && computer === "S") || (choose === "P" && computer ==="
     alert("Wins=" + win+
     "Ties = "+ tie+
     "Loses = "+lose);
+    var playAgain = confirm("Do you want to play again?");
+   
 }
 else if((choose === "R" && computer === "P") || (choose === "P" && computer ==="S")|| (choose === "S" && computer ==="R")) {
     alert("You have lost!");
     lose = lose+1;
-    alert("Wins=" + win+
+    alert("Wins=" + win+ 
           "Ties = "+ tie+
           "Loses = "+lose);
+    var playAgain = confirm("Do you want to play again?");
+    
 }
 
