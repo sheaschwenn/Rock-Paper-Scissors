@@ -16,6 +16,7 @@ var tie = 0;
 var win = 0;
 var lose = 0;
 
+
 function randomGen(){
     var randomNum = Math.floor(Math.random() * 3);
    return RPS[randomNum];
@@ -23,7 +24,7 @@ function randomGen(){
 var computer = randomGen();
 
 function game(){
-var choose = prompt(" Choose R, P, or S");
+    var choose = prompt(" Choose R, P, or S");
 if((choose === "R" && computer === "R") || (choose === "P" && computer ==="P")|| (choose === "S" && computer ==="S")){
     alert("You have tied!");
     tie = tie+1;
@@ -43,12 +44,13 @@ else if((choose === "R" && computer === "S") || (choose === "P" && computer ==="
 }
 
 var score = alert("Wins=" + win+ "Ties = "+ tie+"Loses = "+lose);
-}
-game();
+
 var again = confirm("Do you want to play again?");
 if (again){
     game();
 }
+}
+game();
 
 
 
