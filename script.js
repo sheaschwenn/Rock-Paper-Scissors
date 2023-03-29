@@ -10,7 +10,7 @@
 // alert play again to take user back to main screen 
 
 var RPS = ["R", "P", "S"];
-var choose = prompt(" Choose R, P, or S");
+
 // var playAgain = confirm("Do you want to play again?")
 var tie = 0;
 var win = 0;
@@ -22,11 +22,11 @@ function randomGen(){
 }
 var computer = randomGen();
 
+function game(){
+var choose = prompt(" Choose R, P, or S");
 if((choose === "R" && computer === "R") || (choose === "P" && computer ==="P")|| (choose === "S" && computer ==="S")){
     alert("You have tied!");
     tie = tie+1;
-    
-    
 }
 
 else if((choose === "R" && computer === "S") || (choose === "P" && computer ==="R")|| (choose === "S" && computer ==="P")){
@@ -41,8 +41,16 @@ else if((choose === "R" && computer === "S") || (choose === "P" && computer ==="
     lose = lose+1;
     
 }
-alert("Wins=" + win+ 
-          "Ties = "+ tie+
-          "Loses = "+lose);
+
+var score = alert("Wins=" + win+ "Ties = "+ tie+"Loses = "+lose);
+}
+game();
+var again = confirm("Do you want to play again?");
+if (again){
+    game();
+}
+
+
+
 
 
